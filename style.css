@@ -1,0 +1,160 @@
+/* O CSS possui o conceito de BOX a partir dos elementos HTML. Assim, ela possui suas próprias 
+propriedades de largura, altura e espaçamentos externos! Além disso, as caixas possuem suas próprias
+bordas e preenchimentos!*/
+
+nav{ /* A antiga tag <header> agora foi substituida pela <nav> */
+    display: flex; /* O comando display: flex deixa os elementos da Box <header> um ao lado do outro. Uma forma de realizar
+    essa alteração e visualizá-la antes de introduzir no VSCode é utilizando o código disponível a partir do DevTool no navegador
+    e experimentando as diferentes opções de display! */
+    justify-content: space-between; /* O justify-content obtido do display-flex nos ajuda muito no posicionamento dos elementos! */
+    align-items: center;
+
+    margin: 0 0 55px 0; /* Forma alternativa de se escrever margin-bottom: 55px; */
+
+
+    
+}
+
+main{
+    display: flex;
+    align-items: center;
+
+    justify-content: space-between;
+}
+
+h1{
+    font-family: 'Mulish', sans-serif;
+    
+    font-size: 49px;
+    line-height: 56px;
+    font-weight: normal;
+
+    color: #1f1534;
+    width: 490px; /* Ao limitar a largura do <h1>, é causada uma quebra de linha que também pode ser obtida
+    pela tag <br/> no HTML. Você pode escolher qual utilizar :) */
+}
+
+h1 span {
+    color: #89c5cc;
+    font-weight: bold;
+}
+
+section p{
+
+    font-family: 'Open Sans', sans-serif;
+
+    font-size: 14px;
+    line-height: 28px;
+    color: #7d7987;
+
+    margin: 40px 0;
+
+}
+
+ul{
+    padding: 0;
+    margin: 0;
+
+    display: flex;
+    list-style: none;
+    gap: 48px; /* O gap é uma forma alternativa de criar o espaço entre os elementos da lista. Outra forma possível sera o uso do camando li + li, utilizado no projeto
+    anterior no #footer! */
+
+    font-family: 'Mulish', sans-serif;
+}
+
+a{ /* Aplicam-se as propriedades abaixo para TODOS os links da página! */
+    color: #1f1534;
+    text-decoration: none; /* Retira o sublinhado proveniente da tag <a> de link */
+}
+
+ul li a{
+    opacity: 0.5;
+}
+
+a:hover{
+    font-weight: bold; /* Pseudoclass para receber as propriedades abaixo quando o cursor passar por cima do <li> */
+    opacity: 1;
+} 
+
+
+
+
+button{
+    text-transform: uppercase; /* Aplica caixa alta ao texto definido nessa <tag> no HTML */
+    font-family: 'Open Sans', sans-serif;
+    color: white;
+    
+
+    background: #69b99d;
+    border: none;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    
+    padding: 14px 32px 15px; /* A tag <button>, por padrão, já possui um padding (assim como outros elementos HTML). Portanto, para
+    dimensionar o tamanho do botão, é possível fazer de duas formas: aplicar as dimensões de width e high e zerar o padding ou simplesmente colocar
+    o padding informado pelo Figma. Nesse caso, a segunda opção foi utilizada :) O uso de três valores pode ser lido como
+    padding-top, padding left-right e padding-bottom. */
+
+    border-radius: 4px; /* De forma semelhante ao margin e ao padding, o border-radius também funciona com a inserção dos valores
+    em sentido horário! */
+
+    cursor: pointer; /* Altera o cursor do mouse para o ícone da "mão" ao passar sobre o botão. */
+
+}
+
+button:hover{
+    background: #41876e; /* Ao passar o mouse sobre o botão, ele irá dar uma leve escurecida em sua cor. */
+}
+
+footer{
+
+    font-family: 'Open Sans', sans-serif;
+
+    font-size: 14px;
+    line-height: 28px;
+
+    text-align: center;
+    margin-top: 80px;
+
+}
+
+/*
+footer a{
+    font-weight: bold;
+}
+*/
+
+
+body {
+    margin: 0; /* O comando margin 0; retira completamente a margem da box <body>. Logo, não haverá mais um espaçamento externo! */
+    /* padding: 0; -> O padding, por sua vez, cria um preenchimento INTERNO na box <body>. Ambos os comandos podem usar
+    usados juntos com o objetivo de centralizar o conteúdo das caixas. Este conceito é chamado de Box Model! */
+
+    background: linear-gradient(180deg, rgba(227, 255, 248, 0) 82.08%, rgba(227, 255, 248, 0.38) 100%); /* O primeiro valor informado da função linear-gradient indica a rotação de início do gradiente. O segundo e terceiro valores indicaram as cores
+    aplicadas. É possível encontrar diversos gradientes necessitados no site CSS Gradient! */
+
+    min-height: 100vh; /* Essa propriedade faz o <body> ocupar toda a área disponível do dispositivo de altura. Poderia ser aplicado para a largura (Width) também! Logo, a aplicação do min-height
+    indica que, NO MÍNIMO, o <body> deve ocupar 100 "espacinhos" da viewport. Caso a página tenha mais conteúdo, seja maior e tenha rolagem, não haverá problema. */
+    
+}
+
+.page{
+   /* Use este comando para ter uma melhor visualização de quais alterações ocorrem no Box 
+   Model: border: 1px solid red; */
+    width: 1000px;
+    margin: 0 auto;
+    padding-top: 65px;
+}
+
+#balls{ /* Novamente, da mesma forma que aplicado no último projeto, este comando posiciona o ícone das bolinhas no canto inferior direito. */
+    position: fixed;
+    bottom: 0;
+    right: 0;
+}
+
+/* No navegador, é possível utilizar o DevTools em "Inspecionar Elementos", que permite
+analisar a página, suas propriedades e dimensionamentos! */
